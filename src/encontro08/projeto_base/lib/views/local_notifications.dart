@@ -4,14 +4,14 @@
 import 'package:flutter/material.dart';
 
 class LocalNotifications extends StatefulWidget {
-  const LocalNotifications({Key? key}) : super(key: key);
+  const LocalNotifications({super.key});
 
   @override
   State<LocalNotifications> createState() => _LocalNotificationsState();
 }
 
 class _LocalNotificationsState extends State<LocalNotifications> {
-  TextEditingController _timeController = TextEditingController();
+  final TextEditingController _timeController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
