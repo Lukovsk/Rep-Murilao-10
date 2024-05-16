@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/home',
       routes: {
-        '/home': (context) => const Home(),
+        '/home': (context) => Home(),
         '/local_notifications': (context) => const LocalNotifications(),
-        '/remove_background': (context) => const RemoveBackground(title: 'Remove Background'),
+        '/remove_background': (context) => const RemoveBackground(),
       },
     );
   }
