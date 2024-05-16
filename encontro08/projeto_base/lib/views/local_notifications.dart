@@ -13,6 +13,10 @@ class LocalNotifications extends StatefulWidget {
 
 class _LocalNotificationsState extends State<LocalNotifications> {
   TextEditingController _timeController = TextEditingController();
+
+  @override
+  void initState() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +44,14 @@ class _LocalNotificationsState extends State<LocalNotifications> {
             ),
             IconButton(
               onPressed: () {
+                int? seconds = int.tryParse(_timeController.text);
+                if (seconds == null || seconds <= 0) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Insira um valor válido')),
+                  );
+                  return;
+                }
+
                 AwesomeNotifications()
                     .isNotificationAllowed()
                     .then((isAllowed) {
@@ -47,17 +59,35 @@ class _LocalNotificationsState extends State<LocalNotifications> {
                     AwesomeNotifications()
                         .requestPermissionToSendNotifications();
                   } else {
+                    DateTime scheduleTime = DateTime.now().add(Duration(seconds: seconds));
+                    AwesomeNotifications().setListeners(
+                      onActionReceivedMethod: (receivedNotification) {
+                        if (receivedNotification.payload != null) {
+                          print(
+                              "Notification payload: ${receivedNotification.payload}");
+                        }
+                      },
+                    );
                     AwesomeNotifications().createNotification(
                         content: NotificationContent(
                       id: 1,
                       channelKey: 'test_channel',
                       color: Colors.blue,
                       title: "Hello, this is Jean Rothstein",
-                      body: "Pascoli me ama",
+                      body: "Pascoli me ama", 
                       criticalAlert: true,
                       wakeUpScreen: true,
                       payload: {'data': 'Jupiter exemplos'},
-                    ));
+                    ),
+                        schedule: NotificationCalendar(
+                        year: scheduleTime.year,
+                        month: scheduleTime.month,
+                        day: scheduleTime.day,
+                        hour: scheduleTime.hour,
+                        minute: scheduleTime.minute,
+                        second: scheduleTime.second,
+                        millisecond: 0,
+                        repeats: false,),
                     // AwesomeNotifications().setListeners(
                     //   onActionReceivedMethod: (receivedNotification) {
                     //     if (receivedNotification.payload != null) {
@@ -66,9 +96,18 @@ class _LocalNotificationsState extends State<LocalNotifications> {
                     //     }
                     //   },
                     // );
-                  }
-                });
-              },
+                    );
+                    //AwesomeNotifications().setListeners(
+                    //  onActionReceivedMethod: (receivedNotification) {
+                       
+                    //      print("Notification payload: ${receivedNotification.payload}");
+                        
+                //},
+              //);
+            }
+          }
+        );
+      },
               icon: ClipRRect(  
                 borderRadius: BorderRadius.circular(20.0),
                 child: Image.asset(
