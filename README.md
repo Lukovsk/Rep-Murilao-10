@@ -1,4 +1,10 @@
-# M10-Inteli-Eng-Comp
-Repositório criado para distribuir o material que será utilizado ao longo do módulo 10 de Engenharia de Computação.
+# App com notificação e remoção do fundo de imagens
 
-Para ver a documentação deployada, acesse: [link](https://murilo-zc.github.io/M10-Inteli-Eng-Comp/)
+## Participantes:
+
+- [Bianca Cassemiro](https://github.com/Bianca-Cassemiro)
+- [Gabriel Pascoli](https://github.com/gabrielpascoli)
+- [Patrícia Honorato](https://github.com/ipatriciahonorato)
+- [Jean Machado](https://github.com/jeanroths)
+- [Lucas Sales](https://github.com/Lukovsk)
+- [Rafael Katalan](https://github.com/rafaelkatalan)
