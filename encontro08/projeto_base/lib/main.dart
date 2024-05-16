@@ -2,10 +2,21 @@ import 'package:encontro_08/views/home.dart';
 import 'package:encontro_08/views/local_notifications.dart';
 import 'package:encontro_08/views/remove_background.dart';
 import 'package:flutter/material.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 
 void main() {
+  AwesomeNotifications().initialize(null, [
+    NotificationChannel(
+        ledColor: Colors.blue,
+        enableVibration: true,
+        channelKey: "test_channel",
+        channelName: "Test Notification",
+        channelDescription: 'Basic Notifcaction for the user')
+  ]);
   runApp(const MyApp());
+
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -28,4 +39,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

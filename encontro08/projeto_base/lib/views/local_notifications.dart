@@ -1,6 +1,7 @@
 // local_notifications.dart
 // Construção de uma tela que permite realizar agendamentos de tempo para notificações locais.
 
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 
 class LocalNotifications extends StatefulWidget {
@@ -39,9 +40,36 @@ class _LocalNotificationsState extends State<LocalNotifications> {
             ),
             IconButton(
               onPressed: () {
-                // Navegar para a tela de agendamento de notificações locais
+                AwesomeNotifications()
+                    .isNotificationAllowed()
+                    .then((isAllowed) {
+                  if (!isAllowed) {
+                    AwesomeNotifications()
+                        .requestPermissionToSendNotifications();
+                  } else {
+                    AwesomeNotifications().createNotification(
+                        content: NotificationContent(
+                      id: 1,
+                      channelKey: 'test_channel',
+                      color: Colors.blue,
+                      title: "Hello, this is Jean Rothstein",
+                      body: "Pascoli me ama",
+                      criticalAlert: true,
+                      wakeUpScreen: true,
+                      payload: {'data': 'Jupiter exemplos'},
+                    ));
+                    // AwesomeNotifications().setListeners(
+                    //   onActionReceivedMethod: (receivedNotification) {
+                    //     if (receivedNotification.payload != null) {
+                    //       print(
+                    //           "Notification payload: ${receivedNotification.payload}");
+                    //     }
+                    //   },
+                    // );
+                  }
+                });
               },
-              icon: ClipRRect(
+              icon: ClipRRect(  
                 borderRadius: BorderRadius.circular(20.0),
                 child: Image.asset(
                   'assets/tomato.png',
@@ -51,8 +79,6 @@ class _LocalNotificationsState extends State<LocalNotifications> {
                 ),
               ),
             ),
-            
-           
           ],
         ),
       ),
