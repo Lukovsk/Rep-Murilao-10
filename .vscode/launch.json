@@ -1,0 +1,128 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "hello_mvc",
+            "cwd": "src\\encontro07\\hello_mvc",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "hello_mvc (profile mode)",
+            "cwd": "src\\encontro07\\hello_mvc",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "hello_mvc (release mode)",
+            "cwd": "src\\encontro07\\hello_mvc",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "implementa_mvc",
+            "cwd": "src\\encontro07\\implementa_mvc",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "implementa_mvc (profile mode)",
+            "cwd": "src\\encontro07\\implementa_mvc",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "implementa_mvc (release mode)",
+            "cwd": "src\\encontro07\\implementa_mvc",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "mobx_carrinho",
+            "cwd": "src\\encontro07\\mobx_carrinho",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "mobx_carrinho (profile mode)",
+            "cwd": "src\\encontro07\\mobx_carrinho",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "mobx_carrinho (release mode)",
+            "cwd": "src\\encontro07\\mobx_carrinho",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "mobx_example",
+            "cwd": "src\\encontro07\\mobx_example",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "mobx_example (profile mode)",
+            "cwd": "src\\encontro07\\mobx_example",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "mobx_example (release mode)",
+            "cwd": "src\\encontro07\\mobx_example",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "projeto_base",
+            "cwd": "src\\encontro08\\projeto_base",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "projeto_base (profile mode)",
+            "cwd": "src\\encontro08\\projeto_base",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "projeto_base (release mode)",
+            "cwd": "src\\encontro08\\projeto_base",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "ola_mundo",
+            "cwd": "src\\encontro03\\primeiro-app\\ola_mundo",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "ola_mundo (profile mode)",
+            "cwd": "src\\encontro03\\primeiro-app\\ola_mundo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "ola_mundo (release mode)",
+            "cwd": "src\\encontro03\\primeiro-app\\ola_mundo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

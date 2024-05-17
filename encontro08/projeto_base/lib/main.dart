@@ -1,8 +1,11 @@
 import 'package:encontro_08/views/home.dart';
 import 'package:encontro_08/views/local_notifications.dart';
-import 'package:encontro_08/views/remove_background.dart';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD:encontro08/projeto_base/lib/main.dart
 import 'package:awesome_notifications/awesome_notifications.dart';
+=======
+import '../views/remove_background.dart';
+>>>>>>> tentando-volta-a-cagada-do-merge:src/encontro08/projeto_base/lib/main.dart
 
 void main() {
   AwesomeNotifications().initialize(null, [
@@ -32,9 +35,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/home',
       routes: {
-        '/home': (context) => Home(),
+        '/home': (context) => const Home(),
         '/local_notifications': (context) => const LocalNotifications(),
-        '/remove_background': (context) => const RemoveBackground(),
+        '/remove_background': (context) => const RemoveBackground(title: 'Remove Background'),
       },
     );
   }
